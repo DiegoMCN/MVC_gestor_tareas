@@ -1,9 +1,14 @@
 <?php
-
+/**
+ * @author Diego Chan <channauatdiegomartin@gmail.com>
+ * @version 1.0.0
+ */
 class tareasController extends AppController
 
 {
-
+    /**
+     * @method mixed methodName()
+     */
     public function __construct(){
 
     parent::__construct();

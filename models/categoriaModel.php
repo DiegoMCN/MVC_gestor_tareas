@@ -5,7 +5,7 @@ class CategoriaModel extends AppModel{
     public function listarTodo(){
         $categorias=$this->_db->query("SELECT * FROM categorias");
 
-        return $categorias->fetchall();
+        return $categorias->fetchall('categorias');
     }
 
 
