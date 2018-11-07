@@ -22,7 +22,7 @@
                 <label for="categoria">Categoria</label>
                 <select name="categoria_id" class="form-control">
                     <?php foreach ($this->categorias as $categoria) {?>
-                    <option value="<?php echo $categoria["id"]; ?>">
+                    <option value="<?php echo $categoria_lista["id"]; ?>">
                         <?php echo $categoria["nombre"]; ?></option>
                     <?php } ?>
                 </select>

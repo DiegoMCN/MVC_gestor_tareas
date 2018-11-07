@@ -18,7 +18,9 @@ class TareaModel extends AppModel
             ON tareas.categoria_id=categorias.id"
         );
 
-        /*Array que devuelve*/
+        /**
+         * Devuelve el listado de las tareas
+         */
         foreach (range(0, $tareas->columnCount()-1) as $column_index) {
             $meta[] = $tareas->getColumnMeta($column_index);
         }

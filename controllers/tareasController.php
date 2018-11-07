@@ -37,8 +37,7 @@ class tareasController extends AppController
                 );
             }
             /*echo "<pre>";
-            print_r($_POST);*/
-            
+            print_r($_POST);*/  
         }
 
         $categorias=$this->loadModel("categoria");
