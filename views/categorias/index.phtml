@@ -11,8 +11,8 @@
         
     </div>
 </div>
-<div class="table-responsive">
-    <table class="table">
+<div>
+    <table class="striped responsive-table">
         <tr>
             <th>ID</th>
             <th>Nombre</th>
@@ -30,7 +30,7 @@
                 <a href="<?php echo APP_URL."categorias/editar/".$categoria["categorias"]["id"]; ?>">
                     <i class="material-icons left">border_color</i>
                 </a>
-                <a href="<?php echo APP_URL."categorias/eliminar/".$categoria["categorias"]["id"]; ?>">
+                <a onclick="if(!confirm('Estas apunto de eliminar una categoria ¿Estás seguro?')) return false;" href="<?php echo APP_URL."categorias/eliminar/".$categoria["categorias"]["id"]; ?>">
                     <i class="material-icons left">delete</i>
                 </a>
             </td>

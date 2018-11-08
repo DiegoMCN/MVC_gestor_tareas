@@ -57,7 +57,7 @@
                         <a href="<?php echo APP_URL."tareas/editar/".$tarea["tareas"]["id"]; ?>">
                             <i class="material-icons left">border_color</i>
                         </a>
-                        <a href="<?php echo APP_URL."tareas/eliminar/".$tarea["tareas"]["id"]; ?>">
+                        <a onclick="if(!confirm('Estas apunto de eliminar una tarea ¿Estás seguro?')) return false;" href="<?php echo APP_URL."tareas/eliminar/".$tarea["tareas"]["id"]; ?>">
                             <i class="material-icons left">delete</i>
                         </a>
                         <?php
