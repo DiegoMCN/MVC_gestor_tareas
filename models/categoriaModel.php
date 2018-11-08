@@ -12,8 +12,8 @@ class CategoriaModel extends AppModel{
     
     private static $nombre = "categorias";
     public function listarTodo(){
-        $categorias=$this->_db->query("SELECT * FROM categorias");
-        return $categorias->fetchall();
+        $categoria=$this->_db->query("SELECT * FROM categorias");
+        return $categoria->fetchall();
     }
     public function getCategorias(){
         $categorias=$this->_db->query("SELECT * FROM categorias");

@@ -19,21 +19,23 @@
         <input type="range" name="prioridad" min="0" max="10" value="<?php echo $this->tarea["prioridad"]; ?>">
     </p>
     <p>
-        <label for="categoria">Categoria</label>
-        <select name="categoria_id">
-            <?php foreach ($this->categorias as $categoria) {
-                if ($this->tarea["categoria_id"]==$categoria["id"]) {?>
-                    <option selected value="<?php echo $categoria["id"]; ?>">
-                    <?php echo $categoria["nombre"]; ?></option>
-                <?php
-                }else { ?>
-                    <option value="<?php echo $categoria["id"]; ?>">
-                    <?php echo $categoria["nombre"]; ?></option>
+        <div class="input-field">
+            <select name="categoria_id">
+                <?php foreach ($this->categorias as $categoria) {
+                    if ($this->tarea["categoria_id"]==$categoria["id"]) {?>
+                        <option value="<?php echo $categoria["id"]; ?>">
+                        <?php echo $categoria["nombre"]; ?></option>
+                    <?php
+                    }else { ?>
+                        <option value="<?php echo $categoria["id"]; ?>">
+                        <?php echo $categoria["nombre"]; ?></option>
+                    <?php } ?>
                 <?php } ?>
-            <?php } ?>
-        </select>
+            </select>
+            <label for="categoria">Categoria</label>
+        </div>
     </p>
     <p>
-        <input type="submit" value="Guardar tarea">
+        <input class="btn" type="submit" value="Guardar tarea">
     </p>
 </form>

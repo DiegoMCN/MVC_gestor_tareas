@@ -4,31 +4,33 @@
         <form action="<?php echo APP_URL."tareas/agregar"; ?>" method="POST">
             <p>
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" class="form-control">
+                <input type="text" name="nombre">
             </p>
             <p>
                 <label for="descripcion">Descripción</label>
-                <textarea name="descripcion" class="form-control"></textarea>
+                <textarea name="descripcion" class="materialize-textarea"></textarea>
             </p>
             <p>
                 <label for="fecha">Fecha</label>
-                <input type="date" name="fecha" value="<?php echo date("Y-m-d"); ?>" class="form-control">
+                <input type="text" name="fecha" value="<?php echo date("Y-m-d"); ?>" class="form-control datepicker">
             </p>
             <p>
                 <label for="prioridad">Prioridad</label>
-                <input type="range" name="prioridad" min="0" max="10" class="form-control">
+                <p class="range-field">
+                    <input type="range" id="test5" name="prioridad" min="0" max="10" class="form-control">
+                </p>
             </p>
             <p>
                 <label for="categoria">Categoria</label>
                 <select name="categoria_id" class="form-control">
                     <?php foreach ($this->categorias as $categoria) {?>
-                    <option value="<?php echo $categoria_lista["id"]; ?>">
+                    <option value="<?php echo $categoria["id"]; ?>">
                         <?php echo $categoria["nombre"]; ?></option>
                     <?php } ?>
                 </select>
             </p>
             <p>
-                <input class="btn-primary" type="submit" value="Guardar tarea">
+                <input class="btn" type="submit" value="Guardar tarea">
             </p>
         </form>
     </div>

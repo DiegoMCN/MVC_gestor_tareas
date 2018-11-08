@@ -6,7 +6,7 @@ class categoriasController extends AppController{
     public function index(){
         $categorias = $this->loadModel('categoria');
         $this->_view->categoria = $categorias->getCategorias();
-        $this->_view->titulo = "listado de Categorias";
+        $this->_view->titulo = "Listado de Categorias";
         $this->_view->renderizar('index');
     }
     public function agregar(){

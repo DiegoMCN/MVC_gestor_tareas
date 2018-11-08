@@ -1,16 +1,14 @@
 <div class="row">
-    <div class="col-sm-8"><h3>Listado de Categorias</h3></div>
+    <div class="col-sm-8"><p>  </p></div>
     <div class="col-sm-8">
-        <a href="<?php echo APP_URL."tareas/agregar"; ?>">
-            <button type="button" class="btn-primary add">
-                <span class="glyphicon glyphicon-plus">Tarea</span>
-            </button>
+        <a href="<?php echo APP_URL."tareas/agregar"; ?>" class="waves-effect waves-light btn">
+            <i class="material-icons left">add</i>Tarea
         </a>
-        <a href="<?php echo APP_URL."categorias/agregar"; ?>">
-            <button type="button" class="btn-primary add">
-                <span class="glyphicon glyphicon-plus">Categoria</span>
-            </button>
+
+        <a href="<?php echo APP_URL."categorias/agregar"; ?>" class="waves-effect waves-light btn">
+            <i class="material-icons left">add</i>Categoria
         </a>
+        
     </div>
 </div>
 <div class="table-responsive">
@@ -26,14 +24,14 @@
             <?php echo $categoria["categorias"]["id"]; ?>
             </td>
             <td>
-                <?php                     echo $categoria["categorias"]["nombre"]; ?>
+                <?php echo $categoria["categorias"]["nombre"]; ?>
             </td>
             <td>
                 <a href="<?php echo APP_URL."categorias/editar/".$categoria["categorias"]["id"]; ?>">
-                    <span class="glyphicon glyphicon-edit"> </span>
-                </a>  | 
+                    <i class="material-icons left">border_color</i>
+                </a>
                 <a href="<?php echo APP_URL."categorias/eliminar/".$categoria["categorias"]["id"]; ?>">
-                    <span class="glyphicon glyphicon-trash"></span>
+                    <i class="material-icons left">delete</i>
                 </a>
             </td>
         </tr>
